@@ -23,7 +23,8 @@ const Approve = () => {
     
         try {
           const res = await axios.post("https://quattro-api.onrender.com/api/test/approved", {id, uid});
-          window.location.reload();
+       //   window.location.reload();
+       setProp_questions(prevQuestions => prevQuestions.filter(question => question.id !== id));
         } catch (err) {
             console.log(err);
         }
@@ -34,7 +35,8 @@ const Approve = () => {
     
         try {
           const res = await axios.post("https://quattro-api.onrender.com/api/test/rejected", {id, uid});
-          window.location.reload();
+          //   window.location.reload();
+          setProp_questions(prevQuestions => prevQuestions.filter(question => question.id !== id));
         } catch (err) {
             console.log(err);
         }

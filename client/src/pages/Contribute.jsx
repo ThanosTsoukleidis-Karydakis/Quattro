@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import axios from "axios";
 import { useContext } from 'react'
 import { AuthContext } from "../context/authContext";
+import { useNavigate } from "react-router-dom";
 
 const Contribute = () => {
 
     const [err, setError] = useState(null);
     const [buttonPressed, setButtonPressed] = useState(false);
     const { currentUser, logout } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const id = currentUser.id;
     const username = currentUser.username;
@@ -45,7 +47,9 @@ const Contribute = () => {
         try {
           const res = await axios.post("https://quattro-api.onrender.com/api/test/suggestion", inputs);
           setError(res.data);
-          window.location.reload();
+          
+         // window.location.reload();
+         navigate("/contribute")
         } catch (err) {
           setError(err.response.data);
         }
