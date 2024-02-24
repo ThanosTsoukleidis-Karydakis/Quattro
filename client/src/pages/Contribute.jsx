@@ -43,7 +43,7 @@ const Contribute = () => {
         }
     
         try {
-          const res = await axios.post("/test/suggestion", inputs);
+          const res = await axios.post("https://quattro-api.onrender.com/api/test/suggestion", inputs);
           setError(res.data);
           window.location.reload();
         } catch (err) {
