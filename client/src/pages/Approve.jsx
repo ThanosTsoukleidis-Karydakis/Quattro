@@ -9,7 +9,7 @@ const Approve = () => {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const res = await axios.get(`/test/proposed`);
+          const res = await axios.get(`https://quattro-api.onrender.com/api/test/proposed`);
           setProp_questions(res.data);
         } catch (err) {
           console.log(err);
@@ -22,7 +22,7 @@ const Approve = () => {
         e.preventDefault();
     
         try {
-          const res = await axios.post("/test/approved", {id, uid});
+          const res = await axios.post("https://quattro-api.onrender.com/api/test/approved", {id, uid});
           window.location.reload();
         } catch (err) {
             console.log(err);
@@ -33,7 +33,7 @@ const Approve = () => {
         e.preventDefault();
     
         try {
-          const res = await axios.post("/test/rejected", {id, uid});
+          const res = await axios.post("https://quattro-api.onrender.com/api/test/rejected", {id, uid});
           window.location.reload();
         } catch (err) {
             console.log(err);
