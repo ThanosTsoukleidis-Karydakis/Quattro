@@ -54,7 +54,7 @@ const Quiz = () => {
           };
           const fetchData = async () => {
               try {
-                  const res = await axios.get(`/test`, { params: queryParams });
+                  const res = await axios.get(`https://quattro-api.onrender.com/api/test`, { params: queryParams });
                   setQuestion(res.data);
               } catch (err) {
                   console.log(err);
@@ -68,7 +68,7 @@ const Quiz = () => {
         };
         const fetchData = async () => {
             try {
-                const res = await axios.get(`/test`, { params: queryParams });
+                const res = await axios.get(`https://quattro-api.onrender.com/api/test`, { params: queryParams });
                 setQuestion(res.data);
             } catch (err) {
                 console.log(err);
@@ -82,7 +82,7 @@ const Quiz = () => {
       };
       const fetchData = async () => {
           try {
-              const res = await axios.get(`/test`, { params: queryParams });
+              const res = await axios.get(`https://quattro-api.onrender.com/api/test`, { params: queryParams });
               setQuestion(res.data);
           } catch (err) {
               console.log(err);
@@ -96,7 +96,7 @@ const Quiz = () => {
     };
     const fetchData = async () => {
         try {
-            const res = await axios.get(`/test`, { params: queryParams });
+            const res = await axios.get(`https://quattro-api.onrender.com/api/test`, { params: queryParams });
             setQuestion(res.data);
         } catch (err) {
             console.log(err);
