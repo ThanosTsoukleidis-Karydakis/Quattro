@@ -16,7 +16,7 @@ const Statistics = () => {
                 param1: id,
               };
           try {
-            const res = await axios.get(`/test/statistics`, { params: queryParams });
+            const res = await axios.get(`https://quattro-api.onrender.com/api/test/statistics`, { params: queryParams });
             setStatistics(res.data);
           } catch (err) {
             console.log(err);
