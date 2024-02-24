@@ -25,7 +25,7 @@ const EndQuiz = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-              const response = await axios.post('/test/score', inputs);
+              const response = await axios.post('https://quattro-api.onrender.com/api/test/score', inputs);
               setHigh(response.data.highscore);
            //   console.log(response.data);
             } catch (error) {
