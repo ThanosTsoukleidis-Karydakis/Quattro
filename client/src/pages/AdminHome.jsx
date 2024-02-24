@@ -33,7 +33,7 @@ const AdminHome = () => {
     }
 
     try {
-      const res = await axios.post("/admin/post", inputs);
+      const res = await axios.post("https://quattro-api.onrender.com/api/admin/post", inputs);
       setError(res.data);
       window.location.reload();
     } catch (err) {
